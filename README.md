@@ -1,3 +1,6 @@
+![Node.js CI](https://github.com/constraint-p/handstand/workflows/Node.js%20CI/badge.svg)
+
+
 # sapper-template
 
 The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
