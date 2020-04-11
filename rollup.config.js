@@ -96,5 +96,10 @@ export default {
 		],
 
 		onwarn,
+	},
+
+	moduleContext: {
+		[require.resolve('whatwg-fetch')]: 'window'
 	}
+
 };

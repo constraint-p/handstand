@@ -1,3 +1,34 @@
+<script>
+	import PouchDb from '../components/PouchDb.svelte';
+
+	let handstandInProgress = false;
+
+	function handstandStarted() {
+		handstandInProgress = true;
+	}
+	function handstandStopped() {
+		handstandInProgress = false;
+	}
+
+</script>
+
+
+<svelte:head>
+	<title>Sapper project template</title>
+</svelte:head>
+
+<h2>No handstand yet today</h2>
+
+{#if handstandInProgress}
+	<h2>Handstand in progress..</h2>
+{:else}
+	<h2>No handstand in progress</h2>
+{/if}
+
+<button on:mousedown="{handstandStarted}" on:mouseup="{handstandStopped}" on:mouseleave="{handstandStopped}">Perform Handstand</button>
+
+<PouchDb>Pouchy</PouchDb>
+
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -31,16 +62,3 @@
 		}
 	}
 </style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
